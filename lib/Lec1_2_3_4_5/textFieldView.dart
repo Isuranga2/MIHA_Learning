@@ -37,18 +37,7 @@ class _TextFieldViewState extends State<TextFieldView> {
             padding: EdgeInsets.all(15),  
             child: Column(  
               children: [  
-                Container(  
-                  padding: EdgeInsets.all(15),  
-                  child:  TextField(  
-                    controller: nameController,
-                    decoration: const InputDecoration(  
-                      border: OutlineInputBorder(),  
-                      labelText: 'User Name',  
-                      hintText: 'Enter Your Name',  
-                    ), 
-                     
-                  ),  
-                ),  
+                emailInputWidget(),
                 Container(  
                   padding: EdgeInsets.all(15),  
                   child:  TextField(  
@@ -71,7 +60,26 @@ class _TextFieldViewState extends State<TextFieldView> {
             )  
         ) ,
     ); //! must Return a Widget
-  }  
+  }
+
+  //! In-class widget
+  Widget emailInputWidget(){
+    return Container(  
+                  padding: EdgeInsets.all(15),  
+                  child:  TextField(  
+                    controller: nameController,
+                    decoration: const InputDecoration(  
+                      border: OutlineInputBorder(),  
+                      labelText: 'User Name',  
+                      hintText: 'Enter Your Name',  
+                    ),                      
+                  ),  
+                );
+  } 
+
+
+  //! method 1
+  // return_type method_name (parameters) { method_body}
 }
 
 
