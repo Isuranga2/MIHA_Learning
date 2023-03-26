@@ -1,7 +1,12 @@
 import 'package:MIHA_Learning/screens/lec6/stateFulW.dart';
 import 'package:MIHA_Learning/screens/lec6/stateLessW.dart';
+import 'package:MIHA_Learning/widgets/customButton.dart';
 import 'package:flutter/material.dart';
 
+//**
+//  
+//
+// */
 class Lec6Screen extends StatefulWidget {
   const Lec6Screen({super.key});
 
@@ -64,6 +69,7 @@ class _Lec6ScreenState extends State<Lec6Screen> {
           );
   }
 
+  // 
   Widget emailInputWidget(TextEditingController ctrl){
     return Container(  
                   padding: EdgeInsets.all(15),  

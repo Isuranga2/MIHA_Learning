@@ -1,4 +1,5 @@
-import 'package:MIHA_Learning/screens/lec6Screen.dart';
+import 'package:MIHA_Learning/screens/lec6/lec6Screen.dart';
+import 'package:MIHA_Learning/screens/lec7/lec7Screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,        
       ),      
-      home: const Lec6Screen(), //Screen widget      
+      home: const Lec7Screen(), //Screen widget      
     );
   }
 }
