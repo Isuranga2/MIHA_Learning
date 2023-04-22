@@ -1,3 +1,5 @@
+import 'package:MIHA_Learning/screens/lec10/lec10Screen.dart';
+import 'package:MIHA_Learning/screens/lec10/lec10Screen2.dart';
 import 'package:MIHA_Learning/screens/lec6/lec6Screen.dart';
 
 import 'package:MIHA_Learning/screens/lec8/lec8Screen4.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       //   '/second': (context) => const Lec8Screen2(),
       //   '/third': (context) => const Lec8Screen3(),
       // },
-      home: const Lec9Screen2(), //Screen widget
+      home: const Lec10Screen2(), //Screen widget
     );
   }
 }
