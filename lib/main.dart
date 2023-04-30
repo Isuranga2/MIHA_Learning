@@ -5,11 +5,14 @@ import 'package:MIHA_Learning/screens/lec11/lec11Screen.dart';
 import 'package:MIHA_Learning/screens/lec11/lec11Screen2.dart';
 import 'package:MIHA_Learning/screens/lec12/lec12Screen1.dart';
 import 'package:MIHA_Learning/screens/lec12/lec12Screen2.dart';
+import 'package:MIHA_Learning/screens/lec13/Example/exampleScreen1.dart';
+import 'package:MIHA_Learning/screens/lec13/lec13Screen1.dart';
 import 'package:MIHA_Learning/screens/lec6/lec6Screen.dart';
 
 import 'package:MIHA_Learning/screens/lec8/lec8Screen4.dart';
 import 'package:MIHA_Learning/screens/lec9/lec9Screen.dart';
 import 'package:MIHA_Learning/screens/lec9/lec9Screen2.dart';
+import 'package:MIHA_Learning/utils/appBind.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -32,13 +35,14 @@ class MyApp extends StatelessWidget {
       translations: LanguageConfig(),
       locale: currentLang,
       fallbackLocale: Locale('en', 'US'),
+      initialBinding: AppBinding(),
       // initialRoute: "/",
       // routes: {
       //   '/': (context) => const Lec8Screen(),
       //   '/second': (context) => const Lec8Screen2(),
       //   '/third': (context) => const Lec8Screen3(),
       // },
-      home: const Lec12Screen1(), //Screen widget
+      home: const ExampleScreen1(), //Screen widget
     );
   }
 }
