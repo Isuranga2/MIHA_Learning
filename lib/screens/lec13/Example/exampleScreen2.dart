@@ -12,8 +12,13 @@ class ExampleScreen2 extends StatefulWidget {
 }
 
 class _ExampleScreen2State extends State<ExampleScreen2> {
-
   final testController2 = Get.find<TestController2>();
+  TextEditingController ageCtrl = TextEditingController();
+
+  void changeAge() {
+    int newAge = int.parse(ageCtrl.text);
+    testController2.updateAge(newAge);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +26,27 @@ class _ExampleScreen2State extends State<ExampleScreen2> {
       appBar: AppBar(title: const Text("Example Screen 1")),
       body: Center(
         child: Column(
-          children: [   
-
+          children: [
             const Text("Hello!"),
-            Obx(()=> Text("Name: ${testController2.user.value.name}")),
-            Obx(()=> Text("Age: ${testController2.user.value.age}")),
-            Obx(()=> Text("Id: ${testController2.user.value.id}")),        
-      
+            Obx(() => Text("Name: ${testController2.user.value.name}")),
+            Obx(() => Text("Age: ${testController2.user.value.age}")),
+            Obx(() => Text("Id: ${testController2.user.value.id}")),
+
+            //! Lec 14
+            Container(
+              width: 300,
+              child: TextField(
+              controller: ageCtrl,
+            ),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  changeAge();
+                },
+                child: const Text(
+                  "Submit New Value",
+                )),
+             Obx(() => Text("Observable Value: ${testController2.age}")),
           ],
         ),
       ),

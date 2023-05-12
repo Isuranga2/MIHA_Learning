@@ -23,4 +23,8 @@ class TestController2 extends GetxController{
   void setUser(User usr){
     user.value = usr;
   }
+
+  void updateAge(int ageNew){
+    age.value = ageNew;
+  }
 }
