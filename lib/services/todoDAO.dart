@@ -3,6 +3,7 @@
 import 'package:MIHA_Learning/models/todoTask.dart';
 import 'package:MIHA_Learning/utils/databaseSetup.dart';
 
+// Handle all CRUD operation of ToDoTask Table
 class ToDoDAO {
   var dbConnection;
 
@@ -23,13 +24,14 @@ class ToDoDAO {
 
   //Update a row
 
-  //Read a row
-  void readTODO() async {
+  //Read all row
+  Future<List<Map>> readTODO() async {
     dbConnection = await DatabaseSetup().getDatabaseInstance();
     List<Map> list = await dbConnection.rawQuery('SELECT * FROM ToDoTask');
     print(list);
+    return list;
   }
 
-  //Read all rows
+  //Read a rows
 
 }
