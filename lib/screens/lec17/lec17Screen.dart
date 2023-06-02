@@ -13,32 +13,50 @@ class Lec17Screen extends StatefulWidget {
 }
 
 class _Lec17ScreenState extends State<Lec17Screen> {
-  
-
-  void fetchData()async{
+  void fetchData() async {
     APIController apiController = APIController();
     var output = await apiController.fetchToDoByID(10);
     print(output);
   }
- 
+
+  void sendUserData() async {
+    APIController apiController = APIController();
+    await apiController.sendUserData("eve.holt@reqres.in","cityslicka123" );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Lec 17 Screen")),
       body: Center(
         child: SingleChildScrollView(
-          child: Container(
-            height: 100,
-            child: ElevatedButton(
-                  onPressed: () {
-                    fetchData();
-                  },
-                  child: const Text(
-                    "Fetch TODO",
-                  )),
-          
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                child: ElevatedButton(
+                    onPressed: () {
+                      fetchData();
+                    },
+                    child: const Text(
+                      "Fetch TODO",
+                    )),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                height: 100,
+                child: ElevatedButton(
+                    onPressed: () {
+                      sendUserData();
+                    },
+                    child: const Text(
+                      "Send Data",
+                    )),
+              ),
+            ],
           ),
-        
         ),
       ),
     );

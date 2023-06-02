@@ -18,4 +18,10 @@ class APIController{
       return output;
     }
   }
+
+  Future sendUserData(String email, String pw)async{
+    ToDoAPI toDoAPI = ToDoAPI();
+    var output = await toDoAPI.sendUserData(email, pw);
+    print(output);
+  }
 }
