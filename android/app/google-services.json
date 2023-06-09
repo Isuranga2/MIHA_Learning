@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1092376505629",
+    "project_id": "test-project-67c92",
+    "storage_bucket": "test-project-67c92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092376505629:android:f38db9d1cb0d2f59c185f4",
+        "android_client_info": {
+          "package_name": "com.example.MIHA_Learning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsTncEZn5mAyOLCzKxgCOXvMol1Np31oQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
